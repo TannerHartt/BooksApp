@@ -5,13 +5,14 @@
     height: 4.7rem;
     background-color:#ffffff;
     padding: .5rem 1rem;
+    width: 100%;
 }
 
 .navBarLinks{
     display: block;
     list-style: none;
-    position: relative;
-    left: 900px;
+    position: absolute;
+    right: 3%;
 
 }
 
