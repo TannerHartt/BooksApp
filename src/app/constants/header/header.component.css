@@ -8,12 +8,18 @@
     width: 100%;
 }
 
+.navbar-logo img {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
 .navBarLinks{
     display: block;
     list-style: none;
     position: absolute;
     right: 3%;
-
 }
 
 .navBarLinks li{
