@@ -4,6 +4,7 @@
     justify-content: space-between;
     height: 4.7rem;
     background-color:#ffffff;
+    padding: .5rem 1rem;
 }
 
 .navBarLinks{
@@ -11,9 +12,10 @@
     list-style: none;
     position: relative;
     left: 900px;
+
 }
 
 .navBarLinks li{
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
 }
