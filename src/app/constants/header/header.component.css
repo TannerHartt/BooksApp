@@ -1,0 +1,21 @@
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.7rem;
+    background-color:#ffffff;
+    padding: .5rem 1rem;
+}
+
+.navBarLinks{
+    display: block;
+    list-style: none;
+    position: relative;
+    left: 900px;
+
+}
+
+.navBarLinks li{
+    display: inline;
+    margin-right: 20px;
+}
