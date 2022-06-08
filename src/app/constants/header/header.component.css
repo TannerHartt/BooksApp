@@ -26,3 +26,8 @@
     display: inline;
     margin-right: 20px;
 }
+
+.navBarLinks li a{
+    text-decoration: none;
+  color: #000;
+}

@@ -5,5 +5,15 @@ footer{
     height: 4.7rem;
     background-color:#ffffff;
     padding: .5rem 1rem;
-    width: 100%;  
+    width: 100%;
+}
+
+.sources {
+  position: relative;
+  padding-left: 3.7rem;
+  font-size: 12px;
+  margin-top: 4px;
+}
+.source a u {
+  color: blue;
 }
