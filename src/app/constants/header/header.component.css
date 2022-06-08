@@ -1,21 +1,29 @@
-.navBar{
+.navBar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 4.7rem;
     background-color:#ffffff;
     padding: .5rem 1rem;
+    width: 100%;
 }
 
-.navBarLinks{
+.navbar-logo img {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.navBarLinks {
     display: block;
     list-style: none;
-    position: relative;
-    left: 900px;
-
+    position: absolute;
+    right: 3%;
 }
 
-.navBarLinks li{
+.navBarLinks li {
     display: inline;
     margin-right: 20px;
 }
+
