@@ -12,15 +12,25 @@ export class BooksComponent implements OnInit {
   constructor(private bookService: BookService) { }
 
   angularBooks: Books[] = [];
+  newBooks: Books[] = [];
 
   ngOnInit(): void {
     this.getAngularBooks();
+    this.getNewBooks();
   }
 
   getAngularBooks() {
     this.bookService.getBooks('angular').subscribe(angularBookData => {
       this.angularBooks = angularBookData;
-      console.log(angularBookData);
     });
   }
+  
+  getNewBooks() {
+    this.bookService.getNewBook().subscribe(newBooksData => {
+      this.newBooks = newBooksData;
+    })
+  }
+
+
 }
+

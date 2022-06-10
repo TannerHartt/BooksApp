@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Book} from "../models/book";
-import {of, switchMap} from "rxjs";
+import {Book, Books} from "../models/book";
+import {of, pipe, switchMap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,13 @@ export class BookService {
     );
   }
 
+    getNewBook() {
+      return this.http.get<Book>(`${this.baseUrl}/new`)
+      .pipe(switchMap((res) => {
+        return of(res.books);
+      })
+      );
+    }
 
 
 }
