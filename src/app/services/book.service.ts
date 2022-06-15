@@ -33,8 +33,10 @@ export class BookService {
   }
 
   getBookImages(isbn: string) {
-    return this.http.get(`https://itbook.store/img/books/${isbn}.png`)
-    ;
+    return this.http.get<BookDetails>(`https://itbook.store/img/books/${isbn}.png`)
+      .pipe(switchMap(res => {
+      return of(res.image);
+    }));
   }
 
 

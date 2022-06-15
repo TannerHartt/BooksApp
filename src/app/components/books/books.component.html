@@ -1,5 +1,7 @@
-<app-book-banner [books]="angularBooks" title="Angular Books"></app-book-banner>
-<app-book-banner [books]="reactBooks" title="React Books"></app-book-banner>
-<app-book-banner [books]="mongodbBooks" title="MongoDB Books"></app-book-banner>
-  
-
+<p-carousel [value]="angularBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div class="book">
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+    </div>
+  </ng-template>
+</p-carousel>
