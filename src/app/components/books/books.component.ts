@@ -13,26 +13,15 @@ export class BooksComponent implements OnInit {
   constructor(private bookService: BookService, private route: ActivatedRoute) { }
 
   angularBooks: Books[] = [];
-<<<<<<< HEAD
-  images: string = '';
-  details: BookDetails | null = null;
-  reactBooks: Books[] = [];
-=======
   reactBooks: Books[] = [];
   mongodbBooks: Books[] = [];
->>>>>>> joamcgee
 
 
   ngOnInit(): void {
     this.route.params.subscribe(({isbn13}) => {
       this.getAngularBooks();
       this.getReactBooks();
-<<<<<<< HEAD
-      // this.getImages(isbn13)
-      this.getBookDetails(isbn13);
-=======
       this.getMongodbBooks();
->>>>>>> joamcgee
     });
   }
 
@@ -49,27 +38,15 @@ export class BooksComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
-
-  getReactBooks() {
-    this.bookService.getBooks('react', 1).subscribe(reactBookData => {
-=======
   getReactBooks() {
     this.bookService.getBooks('react').subscribe(reactBookData => {
->>>>>>> joamcgee
       this.reactBooks = reactBookData;
     });
   }
 
-<<<<<<< HEAD
-  getBookDetails(isbn: string) {
-    this.bookService.getBookDetails(isbn).subscribe(detail => {
-      this.details = detail;
-=======
   getMongodbBooks() {
     this.bookService.getBooks('mongodb').subscribe(mongodbBookData => {
       this.mongodbBooks = mongodbBookData;
->>>>>>> joamcgee
     });
   }
 
