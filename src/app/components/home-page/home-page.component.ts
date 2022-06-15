@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Books} from "../../models/book";
 import {BookService} from "../../services/book.service";
 
 @Component({
@@ -9,27 +8,13 @@ import {BookService} from "../../services/book.service";
 })
 export class HomePageComponent implements OnInit {
 
-  angularBooks: Books[] = [];
-  reactBooks: Books[] = [];
 
   constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
-    this.getAngularBooks();
-    this.getReactBooks();
   }
 
+  // TODO refactor to fit new books on home page and category in books page
 
-  getAngularBooks() {
-    this.bookService.getBooks('angular').subscribe(angularBookData => {
-      this.angularBooks = angularBookData;
-    });
-  }
-
-  getReactBooks() {
-    this.bookService.getBooks('react').subscribe(reactBookData => {
-      this.reactBooks = reactBookData;
-    });
-  }
 
 }
