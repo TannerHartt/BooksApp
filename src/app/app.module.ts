@@ -4,7 +4,6 @@ import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
 import {CarouselModule} from 'primeng/carousel';
 
-
 import { AppComponent } from './app.component';
 import { BooksComponent } from './components/books/books.component';
 import { HeaderComponent } from './constants/header/header.component';
@@ -12,7 +11,6 @@ import { FooterComponent } from './constants/footer/footer.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { BookComponent } from './pages/book/book.component';
 import { BookBannerComponent } from './book-banner/book-banner.component';
-import {CarouselModule} from 'primeng/carousel';
 
 
 const routes: Routes = [
@@ -40,11 +38,7 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-<<<<<<< HEAD
     CarouselModule,
-=======
-    CarouselModule
->>>>>>> joamcgee
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
