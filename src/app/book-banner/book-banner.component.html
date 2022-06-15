@@ -4,6 +4,7 @@
     <div class="col-6" *ngFor="let book of books">
       <a class="book" routerLink="'/book/' + book.isbn13">
         <div class="title"> {{ book.title }} </div>
+        <img [src]= "book.image" [alt]= "book.title">
       </a>
     </div>
   </div>

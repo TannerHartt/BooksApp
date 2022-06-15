@@ -13,34 +13,41 @@ export class BooksComponent implements OnInit {
   constructor(private bookService: BookService, private route: ActivatedRoute) { }
 
   angularBooks: Books[] = [];
-  newBooks: Books[] = [];
-  images: BookDetails[] = [];
+  reactBooks: Books[] = [];
+  mongodbBooks: Books[] = [];
 
 
   ngOnInit(): void {
     this.route.params.subscribe(({isbn13}) => {
       this.getAngularBooks();
-      this.getNewBooks();
-
+      this.getReactBooks();
+      this.getMongodbBooks();
     });
   }
 
+
+  // getImages(isbn: string) {
+  //   this.bookService.getBookImages(isbn).subscribe(image => {
+  //     this.images = image;
+  //   });
+  // }
+  
   getAngularBooks() {
     this.bookService.getBooks('angular').subscribe(angularBookData => {
       this.angularBooks = angularBookData;
     });
   }
 
-  getImages(isbn: string) {
-    this.bookService.getBookImages(isbn).subscribe(image => {
-      this.images = image;
+  getReactBooks() {
+    this.bookService.getBooks('react').subscribe(reactBookData => {
+      this.reactBooks = reactBookData;
     });
   }
-  
-  getNewBooks() {
-    this.bookService.getNewBook().subscribe(newBooksData => {
-      this.newBooks = newBooksData;
-    })
+
+  getMongodbBooks() {
+    this.bookService.getBooks('mongodb').subscribe(mongodbBookData => {
+      this.mongodbBooks = mongodbBookData;
+    });
   }
 
 

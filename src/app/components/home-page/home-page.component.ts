@@ -10,26 +10,21 @@ import {BookService} from "../../services/book.service";
 export class HomePageComponent implements OnInit {
 
   angularBooks: Books[] = [];
-  reactBooks: Books[] = [];
-
+  newBooks: Books[] = [];
+  images: string = "";
+  
   constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
-    this.getAngularBooks();
-    this.getReactBooks();
+    this.getNewBooks();
+
   }
 
 
-  getAngularBooks() {
-    this.bookService.getBooks('angular').subscribe(angularBookData => {
-      this.angularBooks = angularBookData;
-    });
+ 
+  getNewBooks() {
+    this.bookService.getNewBook().subscribe(newBooksData => {
+      this.newBooks = newBooksData;
+    })
   }
-
-  getReactBooks() {
-    this.bookService.getBooks('react').subscribe(reactBookData => {
-      this.reactBooks = reactBookData;
-    });
-  }
-
 }
