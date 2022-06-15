@@ -1,0 +1,9 @@
+a {
+  text-decoration: none;
+}
+.book {
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
