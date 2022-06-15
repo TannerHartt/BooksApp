@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HttpClient} from "@angular/common/http";
-import {RouterModule, Routes} from "@angular/router";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { BooksComponent } from './components/books/books.component';
 import { HeaderComponent } from './constants/header/header.component';
 import { FooterComponent } from './constants/footer/footer.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { BookComponent } from './pages/book/book.component';
+import { BookBannerComponent } from './book-banner/book-banner.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  //Add new route here 
+  //Add new route here
   { path: 'books', component: BooksComponent},
+  { path: 'book/:isbn13', component: BookComponent},
 
 
   { path: '**', component: HomePageComponent }
@@ -26,7 +29,9 @@ const routes: Routes = [
     BooksComponent,
     HeaderComponent,
     FooterComponent,
-    HomePageComponent
+    HomePageComponent,
+    BookComponent,
+    BookBannerComponent
   ],
   imports: [
     BrowserModule,

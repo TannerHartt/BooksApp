@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Book, Books} from "../models/book";
 import {of, pipe, switchMap} from "rxjs";
+import {BookDetails} from "../models/book";
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,14 @@ export class BookService {
       })
       );
     }
+  getBookDetails(isbn: string) {
+    return this.http.get<BookDetails>(`${this.baseUrl}/books/${isbn}`);
+  }
+
+  getBookImages(isbn: string) {
+    return this.http.get(`https://itbook.store/img/books/${isbn}.png`)
+    ;
+  }
 
 
 }
