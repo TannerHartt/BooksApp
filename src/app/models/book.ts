@@ -30,3 +30,4 @@ export interface BookDetails {
   image: string;
   url: string;
 }
+

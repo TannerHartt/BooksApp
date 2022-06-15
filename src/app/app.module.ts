@@ -12,6 +12,8 @@ import { FooterComponent } from './constants/footer/footer.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { BookComponent } from './pages/book/book.component';
 import { BookBannerComponent } from './book-banner/book-banner.component';
+import {CarouselModule} from 'primeng/carousel';
+
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -38,7 +40,11 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+<<<<<<< HEAD
     CarouselModule,
+=======
+    CarouselModule
+>>>>>>> joamcgee
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
