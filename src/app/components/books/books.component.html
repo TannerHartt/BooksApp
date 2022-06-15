@@ -1,8 +1,10 @@
+<!--<app-book-banner [books]="angularBooks" title="Angular Books"></app-book-banner>-->
+<!--<app-book-banner [books]="reactBooks" title="React Books"></app-book-banner>-->
 
-  <div class="grid">
-    <div class="col-12 md:col-6 lg:col-3">A</div>
-    <div class="col-12 md:col-6 lg:col-3">B</div>
-    <div class="col-12 md:col-6 lg:col-3">C</div>
-    <div class="col-12 md:col-6 lg:col-3">D</div>
-  </div>
-
+<p-carousel [value]="angularBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div class="book">
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+    </div>
+  </ng-template>
+</p-carousel>

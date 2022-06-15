@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
+import {CarouselModule} from 'primeng/carousel';
+
 
 import { AppComponent } from './app.component';
 import { BooksComponent } from './components/books/books.component';
@@ -13,7 +15,6 @@ import { BookBannerComponent } from './book-banner/book-banner.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  //Add new route here
   { path: 'books', component: BooksComponent},
   { path: 'book/:isbn13', component: BookComponent},
 
@@ -36,7 +37,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    CarouselModule,
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

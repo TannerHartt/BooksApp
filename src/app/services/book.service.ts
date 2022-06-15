@@ -12,8 +12,8 @@ export class BookService {
 
   constructor(private http: HttpClient) { }
 
-  getBooks(type: string) {
-    return this.http.get<Book>(`${this.baseUrl}/search/${type}`)
+  getBooks(type: string, page: number) {
+    return this.http.get<Book>(`${this.baseUrl}/search/${type}?page=${page}`)
       .pipe(switchMap((res) => {
         return of(res.books);
       })
@@ -25,7 +25,10 @@ export class BookService {
   }
 
   getBookImages(isbn: string) {
-    return this.http.get(`https://itbook.store/img/books/${isbn}.png`);
+    return this.http.get<BookDetails>(`https://itbook.store/img/books/${isbn}.png`)
+      .pipe(switchMap(res => {
+      return of(res.image);
+    }));
   }
 
 
