@@ -11,9 +11,7 @@ export class HomePageComponent implements OnInit {
 
   // TODO refactor to fit new books on home page and category in books page
 
-  angularBooks: Books[] = [];
   newBooks: Books[] = [];
-  images: string = "";
 
   constructor(private bookService: BookService) { }
 

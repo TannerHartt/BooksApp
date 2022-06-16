@@ -5,3 +5,35 @@
     </div>
   </ng-template>
 </p-carousel>
+
+<p-carousel [value]="reactBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div class="book">
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+    </div>
+  </ng-template>
+</p-carousel>
+
+<p-carousel [value]="mongodbBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div class="book">
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+    </div>
+  </ng-template>
+</p-carousel>
+
+<p-carousel [value]="sqlBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div class="book">
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+    </div>
+  </ng-template>
+</p-carousel>
+
+<p-carousel [value]="excelBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div class="book">
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+    </div>
+  </ng-template>
+</p-carousel>

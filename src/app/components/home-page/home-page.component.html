@@ -1,1 +1,9 @@
-<app-book-banner [books]="newBooks" title="New Books"></app-book-banner>
+<!-- <app-book-banner [books]="newBooks" title="New Books"></app-book-banner> -->
+
+<p-carousel [value]="newBooks" [numVisible]="5" [numScroll]="5">
+    <ng-template let-book pTemplate="item">
+      <div class="book">
+        <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+      </div>
+    </ng-template>
+  </p-carousel>
