@@ -1,4 +1,23 @@
+<h1 class="title">Angular Books</h1>
 <p-carousel [value]="angularBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div class="book">
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
+    </div>
+  </ng-template>
+</p-carousel>
+
+<h1 class="title">React Books</h1>
+<p-carousel [value]="reactBooks" [numVisible]="5" [numScroll]="5">
+  <ng-template let-book pTemplate="item">
+    <div>
+      <img *ngIf="book.image" [src]="book.image" [alt]="book.title" class="book-img">
+    </div>
+  </ng-template>
+</p-carousel>
+
+<h1 class="title">MongoDB Books</h1>
+<p-carousel [value]="mongodbBooks" [numVisible]="5" [numScroll]="5">
   <ng-template let-book pTemplate="item">
     <div class="book">
       <img *ngIf="book.image" [src]="book.image" [alt]="book.title">
