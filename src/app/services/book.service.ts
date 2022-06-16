@@ -26,18 +26,10 @@ export class BookService {
       .pipe(switchMap((res) => {
         return of(res.books);
       })
-      );
-    }
+    );
+  }
   getBookDetails(isbn: string) {
     return this.http.get<BookDetails>(`${this.baseUrl}/books/${isbn}`);
   }
-
-  getBookImages(isbn: string) {
-    return this.http.get<BookDetails>(`https://itbook.store/img/books/${isbn}.png`)
-      .pipe(switchMap(res => {
-      return of(res.image);
-    }));
-  }
-
 
 }

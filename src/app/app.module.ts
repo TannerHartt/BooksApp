@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { RouterModule, Routes } from "@angular/router";
-import {CarouselModule} from 'primeng/carousel';
+import { CarouselModule } from 'primeng/carousel';
+
 
 import { AppComponent } from './app.component';
 import { BooksComponent } from './components/books/books.component';
