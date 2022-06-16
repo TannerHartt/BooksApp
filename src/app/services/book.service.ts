@@ -26,9 +26,10 @@ export class BookService {
       .pipe(switchMap((res) => {
         return of(res.books);
       })
-      );
-    }
+    );
+  }
   getBookDetails(isbn: string) {
     return this.http.get<BookDetails>(`${this.baseUrl}/books/${isbn}`);
   }
- }
+
+}
