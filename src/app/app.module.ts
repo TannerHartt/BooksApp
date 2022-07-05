@@ -12,12 +12,13 @@ import { FooterComponent } from './constants/footer/footer.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { BookComponent } from './pages/book/book.component';
 import { BookBannerComponent } from './book-banner/book-banner.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'books', component: BooksComponent},
   { path: 'book/:isbn13', component: BookComponent},
-
+  { path: 'contact', component: ContactComponent},
 
   { path: '**', component: HomePageComponent }
 
@@ -32,7 +33,8 @@ const routes: Routes = [
     FooterComponent,
     HomePageComponent,
     BookComponent,
-    BookBannerComponent
+    BookBannerComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
